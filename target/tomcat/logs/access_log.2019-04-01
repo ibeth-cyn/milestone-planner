@@ -6,3 +6,11 @@
 0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:04:25 +0400] "POST /webApp.login.do HTTP/1.1" 302 - http-bio-8080-exec-6 3
 0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:04:25 +0400] "GET /webApp.listMilestone.do HTTP/1.1" 200 1014 http-bio-8080-exec-7 3
 0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:04:28 +0400] "GET /webApp.addMilestone.do HTTP/1.1" 200 1082 http-bio-8080-exec-8 1200
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:44:44 +0400] "GET / HTTP/1.1" 200 337 http-bio-8080-exec-1 2545
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:44:57 +0400] "POST /webApp.login.do HTTP/1.1" 302 - http-bio-8080-exec-3 171
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:44:58 +0400] "GET /webApp.listMilestone.do HTTP/1.1" 200 1014 http-bio-8080-exec-5 255
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:45:00 +0400] "GET /webApp.addMilestone.do HTTP/1.1" 200 1082 http-bio-8080-exec-6 84
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:45:14 +0400] "POST /webApp.addMilestone.do HTTP/1.1" 302 - http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:45:14 +0400] "GET /webApp.listMilestone.do HTTP/1.1" 200 1500 http-bio-8080-exec-8 257
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:45:17 +0400] "GET /webApp.deleteMilestone.do?milestoneName=Clear%20Inbox&project=Gmail&description=To%20make%20sure%20inbox%20is%20always%20clean&dueDate=2019-04-18 HTTP/1.1" 302 - http-bio-8080-exec-10 2
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:45:17 +0400] "GET /webApp.listMilestone.do HTTP/1.1" 200 1014 http-bio-8080-exec-10 2
