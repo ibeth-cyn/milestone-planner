@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 0:0:0:0:0:0:0:1 - - [01/Apr/2019:13:32:05 +0400] "GET / HTTP/1.1" 200 305 http-bio-8080-exec-1 1279
 0:0:0:0:0:0:0:1 - - [01/Apr/2019:13:32:06 +0400] "GET /img/bg1.png HTTP/1.1" 404 973 http-bio-8080-exec-3 3
 0:0:0:0:0:0:0:1 - - [01/Apr/2019:13:32:06 +0400] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-4 1
@@ -35,3 +36,13 @@
 0:0:0:0:0:0:0:1 - - [01/Apr/2019:13:48:34 +0400] "GET /img/bg1.png HTTP/1.1" 404 973 http-bio-8080-exec-8 0
 0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:01:23 +0400] "GET / HTTP/1.1" 200 445 http-bio-8080-exec-6 261
 0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:01:23 +0400] "GET /img/bg1.png HTTP/1.1" 404 973 http-bio-8080-exec-6 3
+=======
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:02:50 +0400] "GET / HTTP/1.1" 404 1011 http-bio-8080-exec-1 111
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:02:51 +0400] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-3 2
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:04:11 +0400] "GET / HTTP/1.1" 200 337 http-bio-8080-exec-1 4416
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:04:22 +0400] "POST /webApp.login.do HTTP/1.1" 302 - http-bio-8080-exec-3 6
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:04:23 +0400] "GET /webApp.listMilestone.do HTTP/1.1" 200 1014 http-bio-8080-exec-5 1016
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:04:25 +0400] "POST /webApp.login.do HTTP/1.1" 302 - http-bio-8080-exec-6 3
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:04:25 +0400] "GET /webApp.listMilestone.do HTTP/1.1" 200 1014 http-bio-8080-exec-7 3
+0:0:0:0:0:0:0:1 - - [01/Apr/2019:14:04:28 +0400] "GET /webApp.addMilestone.do HTTP/1.1" 200 1082 http-bio-8080-exec-8 1200
+>>>>>>> 080ef991e0bae9301f65ff7f7d1124fd5a1adb58
