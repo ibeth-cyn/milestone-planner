@@ -183,7 +183,6 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-      <method v="2" />
     </configuration>
   </component>
   <component name="SvnConfiguration">
