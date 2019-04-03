@@ -1,0 +1,60 @@
+body{
+    background-color: #475BBF;
+    background-image: url(../img/bg1.png);
+    background-size: cover;
+    color: #fff;
+    background-image: url(https://picsum.photos/2048/1365/?random);
+}
+
+button{
+    background-color: #475BBF;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+}
+
+.form_input{
+    padding: 20px;
+    margin: 0 auto;
+
+}
+
+#form_button{
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    padding-top: 10px;
+}
+
+input[type="submit"]{
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    margin: auto;
+}
+
+input[type="text"], input[type="password"]{
+    width: 100%;
+    height: 30px;
+}
+
+.login_card{
+    background-color: #fff;
+    color: #000;
+    width: 35%;
+    margin: auto;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    position: relative;
+}
+
+.login_text{
+    text-align: center;
+    padding: 20px;
+}
