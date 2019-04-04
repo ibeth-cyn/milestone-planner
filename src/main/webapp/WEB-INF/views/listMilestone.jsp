@@ -11,64 +11,70 @@
 <head>
     <meta http-equiv="content-type" content="text/html"; charset="UTF-8">
     <title>List Milestone</title>
-
-    <style>
-
-        @import url('https://fonts.googleapis.com/css?family=Quicksand');
-        *{
-            font-family: "Quicksand", sans-serif;
-        }
-        th, td{
-            width: 200px;
-            padding:10px;
-        }
-
-        th{
-            text-align: left;
-            background: #464646;
-            color: #fff;
-        }
-
-        td{
-            background: mintcream;
-        }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style><%@include file="/WEB-INF/views/style/style.css"%></style>
+    <style><%@include file="/WEB-INF/views/style/listMilestone_style.css"%></style>
 </head>
+
 <body>
+<%-------------------------------------------------%>
+<%--TODO: Add a menu bar--%>
+<%--TODO: Add a footer--%>
+<%--TODO: Add hover effects where necessary--%>
+<%-------------------------------------------------%>
 
-<div >
-    <%--<p>Welcome, ${name}</p>--%>
-    <h1>Your milestones:</h1>
+<div class="dashboard">
+    <h1>Project: <span>E-Learning Website</span></h1>
 
-    <table>
-        <thead>
-        <th>Milestone</th>
-        <th>Project</th>
-        <th>Description</th>
-        <th>Due Date</th>
-        <%--<th>Completion Date</th>--%>
-        <th>Actions</th>
-        </thead>
-        <tbody>
-        <c:forEach items="${milestoneList}" var="milestone">
-            <tr>
-                <td>${milestone.name}</td>
-                <td>${milestone.project} </td>
-                <td>${milestone.description} </td>
-                <td>${milestone.dueDate} </td>
-                <td>
-                    <a href="/webApp.deleteMilestone.do?milestoneName=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
-                        Delete
-                    </a>
-                </td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
 
-    <ul>
-        <li><a href="/webApp.addMilestone.do">Add Milestone</a></li>
-    </ul>
+
+    <div class="container">
+        <div class="row">
+            <c:forEach items="${milestoneList}" var="milestone">
+            <div class="col-6">
+                <div class="mcard">
+                    <h3>${milestone.name}</h3>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <h4>Project: <span>${milestone.project}</span></h4>
+                        </div>
+
+                        <div class="col-6 mdue_date">
+                            <p>Due: ${milestone.dueDate}</p>
+                        </div>
+                    </div>
+
+                    <p>${milestone.description}</p>
+
+                    <div class="row">
+                        <div class="col card_icons">
+
+                            <a class="icon_button" href="/webApp.deleteMilestone.do?milestoneName=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
+                            <i class="fas fa-trash-alt card_icon"></i>
+                            </a>
+                            <i class="fas fa-pencil-alt card_icon"></i>
+                            <i class="fas fa-share-alt card_icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </c:forEach>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-11">
+
+    </div>
+    <div class="col-1">
+        <div class="add_milestone">
+            <a href="/webApp.addMilestone.do"><i class="fas fa-plus-circle"></i></a>
+        </div>
+    </div>
 </div>
 
 </body>

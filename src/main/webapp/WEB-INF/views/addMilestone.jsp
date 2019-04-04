@@ -11,13 +11,9 @@
 <head>
     <meta http-equiv="content-type" content="text/html"; charset="UTF-8">
     <title>Add Milestone</title>
+    <style><%@include file="/WEB-INF/views/style/style.css"%></style>
+    <style><%@include file="/WEB-INF/views/style/addMilestone_style.css"%></style>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Quicksand');
-        *{
-            font-family: "Quicksand", sans-serif;
-        }
-    </style>
 </head>
 <body>
 

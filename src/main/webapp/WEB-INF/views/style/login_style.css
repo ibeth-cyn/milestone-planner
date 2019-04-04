@@ -25,10 +25,7 @@ button{
     margin: auto;
 }
 
-h1{
-    text-align: center;
-    padding-top: 10px;
-}
+
 
 input[type="submit"]{
     background-color: inherit;
