@@ -1,9 +1,9 @@
 body{
     background-color: #475BBF;
-    background-image: url(../img/bg1.png);
+    background-image: url(images/bg1.png);
     background-size: cover;
     color: #fff;
-    background-image: url(https://picsum.photos/2048/1365/?random);
+    /*background-image: url(https://picsum.photos/2048/1365/?random);*/
 }
 
 button{

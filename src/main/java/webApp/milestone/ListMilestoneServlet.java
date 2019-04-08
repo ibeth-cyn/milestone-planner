@@ -17,7 +17,7 @@ public class ListMilestoneServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("milestoneList", milestones.retrieveMilestones());
-        request.getRequestDispatcher("/WEB-INF/views/listMilestone.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/dashboard.jsp").forward(request,response);
 
     }
 
