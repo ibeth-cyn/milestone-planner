@@ -37,7 +37,6 @@
 <body>
 
 <div >
-    <%--<p>Welcome, ${name}</p>--%>
     <h1>Your milestones:</h1>
 
     <table>
@@ -57,7 +56,7 @@
                 <td>${milestone.description} </td>
                 <td>${milestone.dueDate} </td>
                 <td>
-                    <a href="/webApp.deleteMilestone.do?milestoneName=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
+                    <a href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
                         Delete
                     </a>
                 </td>
