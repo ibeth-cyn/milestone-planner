@@ -16,6 +16,7 @@ public class DeleteMilestoneServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
         milestones.deleteMilestone(new Milestone(request.getParameter("name"), request.getParameter("project"),
                 request.getParameter("description"), request.getParameter("dueDate")));
+
         response.sendRedirect("/webApp.listMilestone.do");
     }
 }
