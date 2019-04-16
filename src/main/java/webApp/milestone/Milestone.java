@@ -76,13 +76,12 @@ public class Milestone{
 
     @Override
     public String toString() {
-        return "Milestone{" +
-                "name='" + name + '\'' +
-                ", project='" + project + '\'' +
-                ", description='" + description + '\'' +
-                ", dueDate='" + dueDate + '\'' +
-                ", completionDate='" + completionDate + '\'' +
-                '}';
+        return "Milestone: \n" +
+                "\tMilestone name: " + name + "\n" +
+                "\tProject: " + project + "\n" +
+                "\tDescription: " + description + "\n" +
+                "\tDue Date: " + dueDate + "\n" +
+                "\tCompletion Date: " + completionDate + "\n";
     }
 
     @Override
