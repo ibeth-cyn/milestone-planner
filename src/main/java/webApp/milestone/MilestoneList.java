@@ -7,15 +7,10 @@ public class MilestoneList {
 
     private static List<Milestone> milestones = new ArrayList<Milestone>();
 
-    //Default constructor
-    public MilestoneList() {
-        this.milestones = new ArrayList<>();
-    }
-
     //static constructor for testing
     static {
-        milestones.add(new Milestone("Test Milestone", "Amazing","It is for project Amazing", "2019-09-01"));
-        milestones.add(new Milestone("Another Test Milestone", "Music","It is for project Music", "2019-06-01"));
+//        milestones.add(new Milestone("Test Milestone", "Amazing","It is for project Amazing", "2019-09-01"));
+//        milestones.add(new Milestone("Another Test Milestone", "Music","It is for project Music", "2019-06-01"));
     }
 
     //adding a milestone
