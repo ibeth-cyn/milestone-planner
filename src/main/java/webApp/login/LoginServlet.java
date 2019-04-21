@@ -17,14 +17,12 @@ public class LoginServlet extends HttpServlet {
     //Create an instance of the user validation class
     private LoginService service = new LoginService();
 
-<<<<<<< HEAD:src/main/java/login/LoginServlet.java
+
     //Create an instance of the user authentication class
     PasswordHash passwordHash = new PasswordHash();
 
     //Handles redirection to the login page
-=======
-    //Handles redirection to the webApp.login page
->>>>>>> ec3b2b8aafd1f0f9a46837a6d897be97ccd0e312:src/main/java/webApp/login/LoginServlet.java
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
