@@ -4,7 +4,8 @@
     <display-name>MileStone Planner App</display-name>
 
     <welcome-file-list>
-        <welcome-file>mileStoneApp.login.do</welcome-file>
+        <!--//TO CHANGE TO LANDING PAGE-->
+        <welcome-file>webApp.login.do</welcome-file>
     </welcome-file-list>
 
 </web-app>
