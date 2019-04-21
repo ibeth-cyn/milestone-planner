@@ -1,5 +1,7 @@
 package webApp.milestone;
 
+import webApp.db.MilestoneDB;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,11 +14,11 @@ import java.io.IOException;
 
 public class ListMilestoneServlet extends HttpServlet {
 
-    private MilestoneList milestones = new MilestoneList();
+    private MilestoneDB milestones = new MilestoneDB();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("milestoneList", milestones.retrieveMilestones());
+        request.setAttribute("milestoneList", milestones.getMilestones());
         request.getRequestDispatcher("/WEB-INF/views/dashboard.jsp").forward(request,response);
 
     }

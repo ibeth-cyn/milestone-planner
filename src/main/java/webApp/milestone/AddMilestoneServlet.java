@@ -1,5 +1,7 @@
 package webApp.milestone;
 
+import webApp.db.MilestoneDB;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +13,7 @@ import java.io.IOException;
 
 public class AddMilestoneServlet extends HttpServlet {
 
-    private MilestoneList milestones = new MilestoneList();
+    private MilestoneDB milestones = new MilestoneDB();
 
     @Override
     //getting user input (milestone) from form
