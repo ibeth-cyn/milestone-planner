@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 
 @WebServlet(urlPatterns="/webApp.login.do")
 public class LoginServlet extends HttpServlet {
@@ -15,7 +17,12 @@ public class LoginServlet extends HttpServlet {
     //Create an instance of the user validation class
     private LoginService service = new LoginService();
 
-    //Handles redirection to the webApp.login page
+
+    //Create an instance of the user authentication class
+    PasswordHash passwordHash = new PasswordHash();
+
+    //Handles redirection to the login page
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -28,6 +35,14 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
+
+        try {
+            String storedPassword = passwordHash.createHash(password);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (InvalidKeySpecException e) {
+            e.printStackTrace();
+        }
 
         boolean isUserValid = service.isUserValid(name, password);
 
