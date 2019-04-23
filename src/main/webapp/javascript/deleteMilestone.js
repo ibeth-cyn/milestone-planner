@@ -1,14 +1,14 @@
 // Get the modal
-var modal = document.getElementById('modal_addMilestoneBlock');
+var modal = document.getElementById('modal_deleteMilestone');
 
 // Get the button that opens the modal
-var btn = document.getElementById("addMilestone_button");
+var delete_icon = document.getElementById("delete_icon");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close_addMilestone")[0];
+var span = document.getElementsByClassName("close_delete")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+delete_icon.onclick = function() {
     modal.style.display = "block";
 }
 
