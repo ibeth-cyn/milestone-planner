@@ -30,6 +30,7 @@ public class LoginService {
             return true;
         return false;
     }
+<<<<<<< HEAD
 
     @Override
     public boolean equals(Object o) {
@@ -45,4 +46,6 @@ public class LoginService {
         return Objects.hash(getName(), getPassword());
     }
 
+=======
+>>>>>>> 8d75fbb38d5d46f85b6a493d00034cd663848a75
 }
