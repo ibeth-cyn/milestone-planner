@@ -10,6 +10,7 @@
 
 <div class="login_text">
     <h1>Welcome To Your Milestone Planner App!</h1>
+
     <p>Login or Sign Up to Get Started.</p>
 </div>
 
