@@ -5,7 +5,7 @@
 
     <welcome-file-list>
         <!--//TO CHANGE TO LANDING PAGE-->
-        <welcome-file>webApp.login.do</welcome-file>
+        <welcome-file>webApp.register.do</welcome-file>
     </welcome-file-list>
 
 </web-app>

@@ -1,6 +1,9 @@
 package webApp.db;
 
+import webApp.login.LoginService;
+import webApp.login.PasswordHash;
 import webApp.milestone.Milestone;
+import webApp.register.RegisterService;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -48,6 +51,14 @@ public class MilestoneDB implements AutoCloseable {
                     "PRIMARY KEY(id))";
 
             stmt.executeUpdate(CREATE_TABLE_QUERY);
+
+            String CREATE_TABLE_2_QUERY = "CREATE TABLE IF NOT EXISTS validateList"+
+                    "(id int NOT NULL AUTO_INCREMENT," +
+                    "name VARCHAR(30)," +
+                    "hashPassword VARCHAR(255)," +
+                    "PRIMARY KEY(id))";
+
+            stmt.executeUpdate(CREATE_TABLE_2_QUERY);
 
         }catch(ClassNotFoundException | SQLException e){
             throw new RuntimeException(e);
@@ -115,5 +126,40 @@ public class MilestoneDB implements AutoCloseable {
         }catch(SQLException e){
             throw new RuntimeException(e);
         }
+    }
+
+    public void addHashedPasswords(RegisterService registerService){
+        final String ADD_HASH_PASSWORD = "INSERT INTO validateList (name, hashPassword) VALUES (?,?)";
+
+        try(PreparedStatement ps = connection.prepareStatement(ADD_HASH_PASSWORD)) {
+            System.out.println("Hashed passwords are being added");
+            ps.setString(1, registerService.getName());
+            ps.setString(2, registerService.getHashPassword());
+            ps.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String confirmUser(LoginService loginService) {
+        final String CONFIRM_PASSWORD = "SELECT * FROM validateList WHERE name = ?";
+        String dbName = null;
+        String dbPassword = null;
+        try (PreparedStatement ps = connection.prepareStatement(CONFIRM_PASSWORD)) {
+            System.out.println("Confirming if user is in the database");
+            ps.setString(1, loginService.getName());
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                dbName = rs.getString("name");
+                dbPassword = rs.getString("hashPassword");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if (loginService.getName().equals(dbName)) {
+            return dbPassword;
+        }
+        return dbPassword;
     }
 }
