@@ -133,6 +133,7 @@ public class MilestoneDB implements AutoCloseable {
                 "description = ?, " +
                 "duedate = ?, " +
                 "completeStatus = ?, " +
+                
                 "completiondate = ? " +
                 "WHERE id= " + id;
 
