@@ -34,6 +34,11 @@ add_milestone i:before{
     padding-top: 50px;
 }
 
+/*#editMilestone_button{*/
+    /*border: none;*/
+    /*background-color: inherit;*/
+/*}*/
+
 h1 span, h4 span{
     color: #475BBF;
 }
@@ -42,6 +47,7 @@ h1{
     font-size: 24px;
     text-align: left ;
     padding-left: 75px;
+    margin-top: 20px;
 }
 
 h3{
@@ -70,4 +76,23 @@ h4{
 .mdue_date{
     text-align: right;
     font-size: 14px;
+}
+
+.menu-bar{
+    padding: 10px;
+    border-bottom-color: #fefefe solid 0.5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    margin: 0;
+    /*position: fixed;*/
+
+}
+
+.menu-logout{
+    text-align: right;
+}
+
+.menu-logout button{
+    width: 20%;
+
 }
