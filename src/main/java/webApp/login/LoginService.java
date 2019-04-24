@@ -10,6 +10,4 @@ public class LoginService {
             return true;
         return false;
     }
-
-
 }

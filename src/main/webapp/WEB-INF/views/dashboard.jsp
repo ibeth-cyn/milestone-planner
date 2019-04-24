@@ -128,21 +128,21 @@
 
 
 <%--<div id="modal_deleteMilestone" class="modal_deleteMilestone">--%>
-    <%--&lt;%&ndash;Modal Content&ndash;%&gt;--%>
-    <%--<div class="deleteMilestone_content">--%>
-        <%--<span class="close_delete">&times;</span>--%>
+<%--&lt;%&ndash;Modal Content&ndash;%&gt;--%>
+<%--<div class="deleteMilestone_content">--%>
+<%--<span class="close_delete">&times;</span>--%>
 
-        <%--<h1>Delete milestone:</h1>--%>
+<%--<h1>Delete milestone:</h1>--%>
 
-        <%--<div class="container">--%>
-            <%--<div class="row">--%>
-                <%--<div class="col">--%>
-                    <%--<p>Are you sure you want to delete this milestone? This action cannot be undone.</p>--%>
-                    <%--<a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}"></a>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-    <%--</div>--%>
+<%--<div class="container">--%>
+<%--<div class="row">--%>
+<%--<div class="col">--%>
+<%--<p>Are you sure you want to delete this milestone? This action cannot be undone.</p>--%>
+<%--<a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}"></a>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--</div>--%>
 <%--</div>--%>
 
 
