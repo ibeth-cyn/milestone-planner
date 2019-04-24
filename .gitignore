@@ -4,6 +4,8 @@
 .idea/workspace.xml
 /target
 /.idea
+milestonedb.mv.db
+milestonedb.trace.db
 
 OS junk files
 [Tt]humbs.db
