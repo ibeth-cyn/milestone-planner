@@ -23,11 +23,11 @@ public class PasswordHash {
 
     //Creating a password hash
 
-    static String createHash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException{
+    public static String createHash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException{
         return createHash(password.toCharArray());
     }
 
-    private static String createHash(char [] password) throws NoSuchAlgorithmException, InvalidKeySpecException{
+     private static String createHash(char [] password) throws NoSuchAlgorithmException, InvalidKeySpecException{
 
         //Generate a random salt
         SecureRandom random = new SecureRandom();
@@ -48,7 +48,7 @@ public class PasswordHash {
         return validatePassword(password.toCharArray(), goodHash);
     }
 
-    private static boolean validatePassword(char[] password, String goodHash) throws NoSuchAlgorithmException, InvalidKeySpecException{
+    public static boolean validatePassword(char[] password, String goodHash) throws NoSuchAlgorithmException, InvalidKeySpecException{
 
         //Decode the Hash into its parameters
 

@@ -9,22 +9,17 @@
 <body>
 
 <div class="login_text">
-<<<<<<< HEAD
-<h1>Registration Successful!</h1>
-<p>Log in to view your Milestones.</p>
+    <h1>Welcome To Your Milestone Planner App!</h1>
+    <p>Register to Get Started.</p>
     <!--We can have the paragraphs below appear after a user logs in. How do we figure that out? Debbie?-->
     <!--p>Registration Successful!</p>
     <p>Log in to view your Milestones</p-->
-=======
-    <h1>Welcome To Your Milestone Planner App!</h1>
-    <p>Login or Sign Up to Get Started.</p>
->>>>>>> 8d75fbb38d5d46f85b6a493d00034cd663848a75
 </div>
 
 <!--Create webApp.login form for user-->
 
 <div class="login_card">
-    <form action="/webApp.login.do" method="post">
+    <form action="/webApp.register.do" method="post">
 
         <div class="form_input">
             Name:<br> <input type="text" name="name"/>
@@ -35,7 +30,7 @@
         </div>
 
         <div class="form_input" id="form_button">
-            <button><input type="submit" value="Login"/></button>
+            <button><input type="submit" value="Register"/></button>
         </div>
 
     </form>

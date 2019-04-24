@@ -1,12 +1,18 @@
 #files from intellij
 *.log
 *.class
+<<<<<<< HEAD
+*.lst
+=======
+>>>>>>> 8d75fbb38d5d46f85b6a493d00034cd663848a75
 .idea/workspace.xml
 /target
 /.idea
 milestonedb.mv.db
 milestonedb.trace.db
 MilestonePlannerApp.iml
+<<<<<<< HEAD
+=======
 
 OS junk files
 [Tt]humbs.db
@@ -54,3 +60,4 @@ _ReSharper*/
 
 # Office Temp Files
 ~$*
+>>>>>>> 8d75fbb38d5d46f85b6a493d00034cd663848a75
