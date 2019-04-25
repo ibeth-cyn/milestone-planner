@@ -9,25 +9,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns="/webApp.addMilestone.do")
+@WebServlet(urlPatterns = "/webApp.updateMilestone.do")
 
-public class AddMilestoneServlet extends HttpServlet {
+public class UpdateMilestoneServlet extends HttpServlet {
 
     private MilestoneDB milestones = new MilestoneDB();
 
     @Override
     //posting new user information on web page
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    //protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("Im theere");
+        String stringId = request.getParameter("id");
+        int id  = Integer.parseInt(stringId);
         String name = request.getParameter("milestoneName");
         String project = request.getParameter("project");
         String description = request.getParameter("description");
         String dueDate = request.getParameter("dueDate");
-        String[] completeArray = request.getParameterValues("complete");
-        String complete = completeArray[0];
+        //String[] completeArray = request.getParameterValues("complete");
+        String complete = "true";
 
-        milestones.addMilestone(new Milestone(name, project, description, dueDate, complete));
+        milestones.updateMilestone(new Milestone(name, project, description, dueDate, complete), id);
 
         response.sendRedirect("/webApp.listMilestone.do");
     }
+
+
 }
