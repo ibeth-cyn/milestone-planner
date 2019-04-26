@@ -15,17 +15,18 @@ public class Milestone{
     private String dueDate;
     private String isComplete;
 
+    private int userId;
+
     //Setting automatic completion date
     String pattern = "yyyy-MM-dd";
     DateFormat dateFormat = new SimpleDateFormat(pattern);
     Date date = new Date();
 
     private String completionDate = dateFormat.format(date);
-    private int userId;
 
 
-    //Constructor that takes an isComplete argument
-    public Milestone(String milestoneName, String project, String description, String dueDate, String isComplet){
+    //Constructor that does not take a milestoneId argument
+    public Milestone(String milestoneName, String project, String description, String dueDate, String isComplete){
 
         this.milestoneId = getRandomId();
         System.out.println("the random id is: "+ this.milestoneId);
@@ -60,63 +61,40 @@ public class Milestone{
     }
 
 
-    //Getters and setters for name
+    //Getter for name
     public String getName() {
         return milestoneName;
     }
 
-    public void setName(String name) {
-        this.milestoneName = name;
-    }
-
-    //Getters and setters for project
+    //Getter for project
     public String getProject() {
         return project;
     }
 
-    public void setProject(String project) {
-        this.project = project;
-    }
-
-    //Getters and setters for description
+    //Getter for description
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    //Getters and setters for dueDate
+    //Getter for dueDate
 
     public String getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(String dueDate) {
-        this.dueDate = dueDate;
-    }
-
-    //Getters and setters for isComplete
+    //Getter for isComplete
 
     public String getIsComplete() {
         return isComplete;
     }
 
-    public void setIsComplete(String isComplete) {
-        this.isComplete = isComplete;
-    }
-
-    //Getters and setters for completionDate
+    //Getter for completionDate
 
     public String getCompletionDate() {
         return completionDate;
     }
 
-    public void setCompletionDate(String completionDate){
-        this.completionDate = completionDate;
-    }
-
+    //Getter for milestoneId
     public int getId() {
         return milestoneId++;
     }
@@ -124,12 +102,14 @@ public class Milestone{
     //Method to generate unique integer id's
 
     public int getRandomId() {
+
         UUID uuid = UUID.randomUUID();
         String str=""+uuid;
         int uid = str.hashCode();
         String filterStr=""+uid;
         str = filterStr.replaceAll("-", "");
         return Integer.parseInt(str);
+
     }
 
     @Override
@@ -144,20 +124,4 @@ public class Milestone{
                 "\tCompletion Date: " + completionDate + "\n";
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Milestone milestone = (Milestone) o;
-        return Objects.equals(getName(), milestone.getName()) &&
-                Objects.equals(getProject(), milestone.getProject()) &&
-                Objects.equals(getDescription(), milestone.getDescription()) &&
-                Objects.equals(getDueDate(), milestone.getDueDate()) &&
-                Objects.equals(getCompletionDate(), milestone.getCompletionDate());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getName(), getProject(), getDescription(), getDueDate(), getCompletionDate());
-    }
 }
