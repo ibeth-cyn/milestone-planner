@@ -2,6 +2,7 @@
 *.log
 *.class
 *.lst
+*.xml
 .idea/workspace.xml
 /target
 /.idea
