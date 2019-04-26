@@ -157,6 +157,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<body>\r\n");
       out.write("\r\n");
       out.write("<div class=\"login_text\">\r\n");
+      out.write("\r\n");
       out.write("<h1>Registration Successful!</h1>\r\n");
       out.write("<p>Log in to view your Milestones.</p>\r\n");
       out.write("    <!--We can have the paragraphs below appear after a user logs in. How do we figure that out? Debbie?-->\r\n");
@@ -170,13 +171,13 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<div class=\"login_card\">\r\n");
       out.write("    <form action=\"/webApp.login.do\" method=\"post\">\r\n");
       out.write("\r\n");
-      out.write("    <div class=\"form_input\">\r\n");
-      out.write("    Name:<br> <input type=\"text\" name=\"name\"/>\r\n");
-      out.write("    </div>\r\n");
+      out.write("        <div class=\"form_input\">\r\n");
+      out.write("            Name:<br> <input type=\"text\" name=\"name\"/>\r\n");
+      out.write("        </div>\r\n");
       out.write("\r\n");
-      out.write("    <div class=\"form_input\">\r\n");
-      out.write("    Password:<br> <input type=\"password\" name=\"password\"/>\r\n");
-      out.write("    </div>\r\n");
+      out.write("        <div class=\"form_input\">\r\n");
+      out.write("            Password:<br> <input type=\"password\" name=\"password\"/>\r\n");
+      out.write("        </div>\r\n");
       out.write("\r\n");
       out.write("        <div class=\"form_input\" id=\"form_button\">\r\n");
       out.write("            <button><input type=\"submit\" value=\"Login\"/></button>\r\n");
