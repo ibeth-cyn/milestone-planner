@@ -4,7 +4,7 @@ h1{
 }
 
 /* The Modal (background) */
-#modal_editMilestoneBlock {
+.modal_editMilestoneBlock {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -17,10 +17,10 @@ h1{
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-#editMilestone_button{
-    border: none;
-    background-color: inherit;
-}
+/*.editMilestone_button{*/
+/*    border: none;*/
+/*    background-color: inherit;*/
+/*}*/
 
 /* Modal Content/Box */
 .editMilestone_content {
@@ -55,8 +55,9 @@ button{
     margin: 5px auto;
 }
 
-#editMilestone_button{
-    background-color: inherit;
+/*#editMilestone_button{*/
+.editMilestone_button{
+    background-color: blue;
     color: #000;
     width: 10%;
     padding: 5px 10px;
