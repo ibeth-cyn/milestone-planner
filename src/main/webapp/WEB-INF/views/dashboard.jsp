@@ -20,8 +20,6 @@
     <style><%@include file="/WEB-INF/views/style/editMilestone.css"%></style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <%--<script><%@include file="/WEB-INF/views/style/addMilestone.js"%></script>--%>
-    <%--<script src="${pageContext.request.contextPath}/WEB-INF/views/style.addMilestone.js"></script>--%>
 
 </head>
 
@@ -50,8 +48,6 @@
 <div class="dashboard">
     <h1>Project: <span>E-Learning Website</span></h1>
 
-
-
     <div class="container">
         <div class="row">
             <c:forEach items="${milestoneList}" var="milestone">
@@ -78,14 +74,7 @@
                                     <i class="fas fa-trash-alt card_icon"></i>
                                 </a>
 
-                                <%--<a class="icon_button" id="delete_icon" href="/webApp.listMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">--%>
-                                    <%--<i class="fas fa-pencil-alt card_icon"></i>--%>
-                                <%--</a>--%>
-
-                                <%--onclick="/webApp.listMilestone.do"--%>
-
                                 <button id="editMilestone_button" class="editMilestone_button" ><i class="fas fa-pencil-alt card_icon"></i></button>
-                                <%--<i class="fas fa-pencil-alt card_icon"></i>--%>
                                 <i class="fas fa-share-alt card_icon"></i>
                             </div>
                         </div>
@@ -101,7 +90,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <form action="webApp.addMilestone.do" method="post">
+                                   <form action="webApp.updateMilestone.do" method="get"> <%-- chnaged from post to get--%>
+                                       <input type="text" name="id" value="${milestone.id}" hidden>
                                         <fieldset>
                                             <label>Name:</label><br>
                                             <input class="form_input" type="text" name="milestoneName" value="${milestone.name}" required/><br> <br>
@@ -115,8 +105,7 @@
                                         <fieldset>
                                             <label>Description: </label><br>
                                             <input class="form_input" type="text" name="description" value="${milestone.description}" required/> <br> <br>
-                                                <%--<p> Fetched description: ${milestone.description}</p>--%>
-                                                <%--<p id="content">Ajax data here: </p><br>--%>
+
                                         </fieldset>
 
                                         <fieldset>
@@ -195,40 +184,8 @@
 </div>
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-<%--<div id="modal_deleteMilestone" class="modal_deleteMilestone">--%>
-<%--&lt;%&ndash;Modal Content&ndash;%&gt;--%>
-<%--<div class="deleteMilestone_content">--%>
-<%--<span class="close_delete">&times;</span>--%>
-
-<%--<h1>Delete milestone:</h1>--%>
-
-<%--<div class="container">--%>
-<%--<div class="row">--%>
-<%--<div class="col">--%>
-<%--<p>Are you sure you want to delete this milestone? This action cannot be undone.</p>--%>
-<%--<a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}"></a>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
->>>>>>> 68b855c866331d606f59ca080f1ee635a7bdad99
-
-
-
-
-
 <script src="javascript/addMilestone.js"></script>
 <script src="javascript/editMilestone.js"></script>
-<%--<script src="javascript/editMilestone.js"></script>--%>
-
 
 </body>
 </html>

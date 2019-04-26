@@ -17,6 +17,7 @@
     <p>Log in to view your Milestones</p-->
 =======
     <h1>Welcome To Your Milestone Planner App!</h1>
+
     <p>Login or Sign Up to Get Started.</p>
 >>>>>>> 8d75fbb38d5d46f85b6a493d00034cd663848a75
 </div>
