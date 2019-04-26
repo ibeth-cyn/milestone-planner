@@ -37,11 +37,9 @@
         <div class="col-6">
             <img src="images/MP.png">
         </div>
-
-        <div class="col-6 menu-logout">
+        <form class="col-6 menu-logout" action ="webApp.logout.do" method="post">
             <button>Logout</button>
-
-        </div>
+        </form>
     </div>
 
 <%--</div>--%>
@@ -194,14 +192,6 @@
     </div>
 </div>
 
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
 <%--<div id="modal_deleteMilestone" class="modal_deleteMilestone">--%>
 <%--&lt;%&ndash;Modal Content&ndash;%&gt;--%>
 <%--<div class="deleteMilestone_content">--%>
@@ -219,7 +209,6 @@
 <%--</div>--%>
 <%--</div>--%>
 <%--</div>--%>
->>>>>>> 68b855c866331d606f59ca080f1ee635a7bdad99
 
 
 

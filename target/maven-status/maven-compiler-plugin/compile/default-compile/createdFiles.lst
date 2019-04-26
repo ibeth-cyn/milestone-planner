@@ -1,2 +1,4 @@
+webApp\login\LogoutServlet.class
+webApp\db\PasswordDB.class
 webApp\register\RegisterServlet.class
 webApp\register\RegisterService.class

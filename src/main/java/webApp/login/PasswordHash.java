@@ -38,17 +38,17 @@ public class PasswordHash {
         byte[] hash= pbkdf2(password, salt, PBKDF2_ITERATIONS, HASH_BYTES);
 
         //format iterations: salt: hash
-        return PBKDF2_ITERATIONS + ":" + toHex(salt) + ":" + ":" + toHex(hash);
+        return PBKDF2_ITERATIONS + ":" + toHex(salt) + ":" + toHex(hash);
 
     }
 
     //Password Validation
 
-    static boolean validatePassword(String password, String goodHash) throws NoSuchAlgorithmException,InvalidKeySpecException{
+    public static boolean validatePassword(String password, String goodHash) throws NoSuchAlgorithmException,InvalidKeySpecException{
         return validatePassword(password.toCharArray(), goodHash);
     }
 
-    public static boolean validatePassword(char[] password, String goodHash) throws NoSuchAlgorithmException, InvalidKeySpecException{
+    private static boolean validatePassword(char[] password, String goodHash) throws NoSuchAlgorithmException, InvalidKeySpecException{
 
         //Decode the Hash into its parameters
 
@@ -68,7 +68,7 @@ public class PasswordHash {
 
     //Compute the Hash
 
-    private static byte[] pbkdf2(char[] password, byte[] salt, int iterations, int bytes) throws NoSuchAlgorithmException, InvalidKeySpecException{
+   private static byte[] pbkdf2(char[] password, byte[] salt, int iterations, int bytes) throws NoSuchAlgorithmException, InvalidKeySpecException{
 
         PBEKeySpec spec = new PBEKeySpec(password, salt, iterations, bytes * 8);
         SecretKeyFactory skf = SecretKeyFactory.getInstance(PBKDF2_ALGORITHM);
@@ -87,7 +87,7 @@ public class PasswordHash {
     //Hex to byte array
 
     private static byte[] fromHex(String hex){
-        byte [] binary = new byte[hex.length() /2];
+        byte [] binary = new byte[hex.length() / 2];
         for (int i = 0; i < binary.length; i++){
             binary[i] = (byte) Integer.parseInt( hex.substring(2 * i, 2 * i + 2), 16);
         }
@@ -96,7 +96,7 @@ public class PasswordHash {
 
     //And back to byte
 
-    private static String toHex(byte [] array){
+    private static String toHex(byte[] array){
         BigInteger bi = new BigInteger(1, array);
         String hex = bi.toString(16);
         int paddingLength = (array.length * 2) - hex.length();

@@ -1,6 +1,6 @@
 package webApp.login;
 
-import webApp.db.MilestoneDB;
+import webApp.db.PasswordDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,9 +18,9 @@ public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     //Create an instance of the user authentication class
-//    PasswordHash passwordHash = new PasswordHash();
+    PasswordHash passwordHash = new PasswordHash();
 
-    private MilestoneDB authenticate = new MilestoneDB();
+    private PasswordDB authenticate = new PasswordDB();
     //Handles redirection to the login page
 
     @Override
@@ -36,21 +36,13 @@ public class LoginServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         try {
-            PasswordHash.validatePassword(password, authenticate.confirmUser(new LoginService(name,password)));
+            passwordHash.validatePassword(password, authenticate.confirmUser(new LoginService(name)));
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         } catch (InvalidKeySpecException e) {
             e.printStackTrace();
         }
-
         response.sendRedirect("/webApp.listMilestone.do");
-//        if(breakHash) {
-//            response.sendRedirect("/webApp.listMilestone.do");
-//
-//        }
-        //request.setAttribute("errorMessage", "Invalid Credentials!!");
-            //request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
-        //}
 
     }
 }

@@ -22,17 +22,20 @@
     <form action="/webApp.register.do" method="post">
 
         <div class="form_input">
-            Name:<br> <input type="text" name="name"/>
+            Name:<br> <input type="text" name="name" maxlength="30"/>
         </div>
 
         <div class="form_input">
-            Password:<br> <input type="password" name="password"/>
+            Password:<br> <input type="password" name="password"title="Password must be atleast 8 or more characters including 1 uppercase letter, 1 lowercase letter and numeric characters" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
         </div>
 
-        <div class="form_input" id="form_button">
+        <div class = "form_input" id="form_button">
             <button><input type="submit" value="Register"/></button>
         </div>
-
+        <div class = "form_input">
+            <p>Already have an account? <a href="/webApp.login.do">Login here</a></p>
+        </div>
+<!--Include an already registed message hyperlinked -->
     </form>
 </div>
 
