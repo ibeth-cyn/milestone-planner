@@ -9,17 +9,11 @@
 <body>
 
 <div class="login_text">
-<<<<<<< HEAD
-<h1>Registration Successful!</h1>
+<h1>Welcome to the Login Page!</h1>
 <p>Log in to view your Milestones.</p>
     <!--We can have the paragraphs below appear after a user logs in. How do we figure that out? Debbie?-->
     <!--p>Registration Successful!</p>
     <p>Log in to view your Milestones</p-->
-=======
-    <h1>Welcome To Your Milestone Planner App!</h1>
-
-    <p>Login or Sign Up to Get Started.</p>
->>>>>>> 8d75fbb38d5d46f85b6a493d00034cd663848a75
 </div>
 
 <!--Create webApp.login form for user-->
@@ -28,11 +22,11 @@
     <form action="/webApp.login.do" method="post">
 
         <div class="form_input">
-            Name:<br> <input type="text" name="name"/>
+            Name:<br> <input type="text" name="name" maxlength="30"/>
         </div>
 
         <div class="form_input">
-            Password:<br> <input type="password" name="password"/>
+            Password:<br> <input type="password" name="password" title="Password must be atleast 8 or more characters including 1 uppercase letter, 1 lowercase letter and numeric characters" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
         </div>
 
         <div class="form_input" id="form_button">

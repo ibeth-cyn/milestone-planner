@@ -1,6 +1,6 @@
 package webApp.register;
 
-import webApp.db.MilestoneDB;
+import webApp.db.PasswordDB;
 import webApp.login.PasswordHash;
 
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ import java.security.spec.InvalidKeySpecException;
 @WebServlet(urlPatterns = "/webApp.register.do")
 public class RegisterServlet extends HttpServlet {
 
-    private MilestoneDB validate = new MilestoneDB();
+    private PasswordDB validate = new PasswordDB();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

@@ -35,11 +35,9 @@
         <div class="col-6">
             <img src="images/MP.png">
         </div>
-
-        <div class="col-6 menu-logout">
+        <form class="col-6 menu-logout" action ="webApp.logout.do" method="post">
             <button>Logout</button>
-
-        </div>
+        </form>
     </div>
 
 <%--</div>--%>

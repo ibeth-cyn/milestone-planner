@@ -7,7 +7,7 @@ public class LoginService {
     private String name;
     private String password;
 
-    public LoginService(String name, String password){
+    public LoginService(String name){
         this.name = name;
         this.password = password;
     }
@@ -25,12 +25,11 @@ public class LoginService {
     }
 
     //Validate user webApp.login
-    public boolean isUserValid(String name, String password){
-        if(name.equals("Group5") && password.equals("enter"))
-            return true;
-        return false;
-    }
-<<<<<<< HEAD
+//    public boolean isUserValid(String name, String password){
+//        if(name.equals("Group5") && password.equals("enter"))
+//            return true;
+//        return false;
+//    }
 
     @Override
     public boolean equals(Object o) {
@@ -46,6 +45,4 @@ public class LoginService {
         return Objects.hash(getName(), getPassword());
     }
 
-=======
->>>>>>> 8d75fbb38d5d46f85b6a493d00034cd663848a75
 }
