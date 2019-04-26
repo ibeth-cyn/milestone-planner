@@ -27,9 +27,9 @@
 //            System.out.println(milestones.get(i).toString());
 //        }
 //
-//        int id = milestone1.getId();
+//        int id = milestones.get(2).getId();
 //        milestone1 = new Milestone(id,"UPDATE - Review code", "Programming", "Completmilestonedbe the WPD assignment", "2019-10-20", "false");
-//        db.updateMilestone(milestone1);
+//        db.updateMilestone(milestone1, id);
 //
 //        milestones = db.getMilestones();
 //

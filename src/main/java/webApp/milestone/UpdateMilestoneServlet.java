@@ -25,8 +25,7 @@ public class UpdateMilestoneServlet extends HttpServlet {
         String project = request.getParameter("project");
         String description = request.getParameter("description");
         String dueDate = request.getParameter("dueDate");
-        //String[] completeArray = request.getParameterValues("complete");
-        String complete = "true";
+        String complete = request.getParameter("complete");
 
         milestones.updateMilestone(new Milestone(name, project, description, dueDate, complete), id);
 

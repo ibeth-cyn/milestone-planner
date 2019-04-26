@@ -48,7 +48,7 @@
 
     <div class="container">
         <div class="row">
-            <c:forEach items="${milestoneList}" var="milestone">
+            <c:forEach items="${milestoneList}" var="milestone" varStatus="loop">
                 <div class="col-md-6">
                     <div class="mcard">
                         <h3>${milestone.name}</h3>
@@ -68,11 +68,16 @@
                         <div class="row">
                             <div class="col card_icons">
 
-                                <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
-                                    <i class="fas fa-trash-alt card_icon"></i>
-                                </a>
+<%--                                <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">--%>
+<%--                                    <i class="fas fa-trash-alt card_icon"></i>--%>
+<%--                                </a>--%>
 
-                                <button id="editMilestone_button" class="editMilestone_button" ><i class="fas fa-pencil-alt card_icon"></i></button>
+                               <i class="fas fa-trash-alt card_icon"> <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
+                               </a></i>
+
+
+                                <button id="editMilestone_button-${loop.index}" class="editMilestone_button"><i class="fas fa-pencil-alt card_icon"></i></button>
+                                <%--removed class="editMilestone_button" --%>
                                 <i class="fas fa-share-alt card_icon"></i>
                             </div>
                         </div>
@@ -80,7 +85,7 @@
                 </div>
 
                 <%--EDIT MILESTONE MODAL--%>
-                <div id="modal_editMilestoneBlock" class="modal_editMilestoneBlock">
+                <div id="modal_editMilestoneBlock-${loop.index}" class="modal_editMilestoneBlock" > <%--removed class="modal_editMilestoneBlock"--%>
                         <%--Modal Content--%>
                     <div class="editMilestone_content">
                         <span class="close_editMilestone">&times;</span>
@@ -90,7 +95,8 @@
                                 <div class="col">
                                    <form action="webApp.updateMilestone.do" method="get"> <%-- chnaged from post to get--%>
                                        <input type="text" name="id" value="${milestone.id}" hidden>
-                                        <fieldset>
+
+                                       <fieldset>
                                             <label>Name:</label><br>
                                             <input class="form_input" type="text" name="milestoneName" value="${milestone.name}" required/><br> <br>
                                         </fieldset>
@@ -103,7 +109,6 @@
                                         <fieldset>
                                             <label>Description: </label><br>
                                             <input class="form_input" type="text" name="description" value="${milestone.description}" required/> <br> <br>
-
                                         </fieldset>
 
                                         <fieldset>
@@ -184,6 +189,5 @@
 
 <script src="javascript/addMilestone.js"></script>
 <script src="javascript/editMilestone.js"></script>
-
 </body>
 </html>

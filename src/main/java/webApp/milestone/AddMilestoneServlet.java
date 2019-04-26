@@ -16,15 +16,14 @@ public class AddMilestoneServlet extends HttpServlet {
     private MilestoneDB milestones = new MilestoneDB();
 
     @Override
-    //posting new user information on web page
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String name = request.getParameter("milestoneName");
         String project = request.getParameter("project");
         String description = request.getParameter("description");
         String dueDate = request.getParameter("dueDate");
-        String[] completeArray = request.getParameterValues("complete");
-        String complete = completeArray[0];
+        String complete = request.getParameter("complete");
 
         milestones.addMilestone(new Milestone(name, project, description, dueDate, complete));
 

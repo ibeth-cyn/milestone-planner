@@ -20,9 +20,7 @@ public class DeleteMilestoneServlet extends HttpServlet {
         String project = request.getParameter("project");
         String description = request.getParameter("description");
         String dueDate = request.getParameter("duedate");
-        //String[] completeArray = request.getParameterValues("complete");
-        //String complete = completeArray[0];
-        String complete = "false";
+        String complete = request.getParameter("complete");
 
         milestones.deleteMilestone(new Milestone(name, project, description,dueDate,complete));
 
