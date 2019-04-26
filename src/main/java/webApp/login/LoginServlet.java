@@ -44,13 +44,6 @@ public class LoginServlet extends HttpServlet {
         }
 
         response.sendRedirect("/webApp.listMilestone.do");
-//        if(breakHash) {
-//            response.sendRedirect("/webApp.listMilestone.do");
-//
-//        }
-        //request.setAttribute("errorMessage", "Invalid Credentials!!");
-            //request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
-        //}
 
     }
 }

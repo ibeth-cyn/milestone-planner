@@ -42,7 +42,7 @@ public class MilestoneDB implements AutoCloseable {
 
             stmt = connection.createStatement();
             String CREATE_TABLE_QUERY = "CREATE TABLE IF NOT EXISTS milestonelist" +
-                    "(id VARCHAR(255)," +
+                    "(id INT NOT NULL," +
                     "name VARCHAR(30)," +
                     "project VARCHAR(30)," +
                     "description VARCHAR(255)," +
@@ -54,7 +54,7 @@ public class MilestoneDB implements AutoCloseable {
             stmt.executeUpdate(CREATE_TABLE_QUERY);
 
             String CREATE_TABLE_2_QUERY = "CREATE TABLE IF NOT EXISTS validateList"+
-                    "(id int NOT NULL AUTO_INCREMENT," +
+                    "(id INT NOT NULL AUTO_INCREMENT," +
                     "name VARCHAR(30)," +
                     "hashPassword VARCHAR(255)," +
                     "PRIMARY KEY(id))";

@@ -17,9 +17,8 @@ public class UpdateMilestoneServlet extends HttpServlet {
 
     @Override
     //posting new user information on web page
-    //protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("Im theere");
+
         String stringId = request.getParameter("id");
         int id  = Integer.parseInt(stringId);
         String name = request.getParameter("milestoneName");

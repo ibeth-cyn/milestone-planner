@@ -9,17 +9,13 @@
 <body>
 
 <div class="login_text">
-<<<<<<< HEAD
+
 <h1>Registration Successful!</h1>
 <p>Log in to view your Milestones.</p>
     <!--We can have the paragraphs below appear after a user logs in. How do we figure that out? Debbie?-->
     <!--p>Registration Successful!</p>
     <p>Log in to view your Milestones</p-->
-=======
-    <h1>Welcome To Your Milestone Planner App!</h1>
 
-    <p>Login or Sign Up to Get Started.</p>
->>>>>>> 8d75fbb38d5d46f85b6a493d00034cd663848a75
 </div>
 
 <!--Create webApp.login form for user-->

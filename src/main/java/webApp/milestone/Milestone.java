@@ -8,8 +8,8 @@ import java.util.UUID;
 
 public class Milestone{
 
-    private int id;
-    private String name;
+    private int milestoneId;
+    private String milestoneName;
     private String project;
     private String description;
     private String dueDate;
@@ -21,19 +21,19 @@ public class Milestone{
     Date date = new Date();
 
     private String completionDate = dateFormat.format(date);
-
+    private int userId;
 
 
     //Constructor that takes an isComplete argument
-    public Milestone(String name, String project, String description, String dueDate, String complete){
+    public Milestone(String milestoneName, String project, String description, String dueDate, String isComplet){
 
-        this.id = getRandomId();
-        System.out.println("the random id is: "+ this.id);
-        this.name = name;
+        this.milestoneId = getRandomId();
+        System.out.println("the random id is: "+ this.milestoneId);
+        this.milestoneName = milestoneName;
         this.project = project;
         this.description = description;
         this.dueDate = dueDate;
-        this.isComplete = complete;
+        this.isComplete = isComplete;
 
         if(this.isComplete == "true"){
             this.completionDate = getCompletionDate();
@@ -43,14 +43,14 @@ public class Milestone{
     }
 
     //Constructor that takes in an id
-    public Milestone(int id ,String name, String project, String description, String dueDate, String complete){
+    public Milestone(int milestoneId ,String milestoneName, String project, String description, String dueDate, String isComplete){
 
-        this.id = id;
-        this.name = name;
+        this.milestoneId = milestoneId;
+        this.milestoneName = milestoneName;
         this.project = project;
         this.description = description;
         this.dueDate = dueDate;
-        this.isComplete = complete;
+        this.isComplete = isComplete;
 
         if(this.isComplete == "true"){
             this.completionDate = getCompletionDate();
@@ -62,11 +62,11 @@ public class Milestone{
 
     //Getters and setters for name
     public String getName() {
-        return name;
+        return milestoneName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.milestoneName = name;
     }
 
     //Getters and setters for project
@@ -103,8 +103,8 @@ public class Milestone{
         return isComplete;
     }
 
-    public void setIsComplete(String complete) {
-        isComplete = complete;
+    public void setIsComplete(String isComplete) {
+        this.isComplete = isComplete;
     }
 
     //Getters and setters for completionDate
@@ -118,7 +118,7 @@ public class Milestone{
     }
 
     public int getId() {
-        return id++;
+        return milestoneId++;
     }
 
     //Method to generate unique integer id's
@@ -135,8 +135,8 @@ public class Milestone{
     @Override
     public String toString() {
         return "Milestone: \n" +
-                "\tMilestone id: " + id + "\n" +
-                "\tMilestone name: " + name + "\n" +
+                "\tMilestone id: " + milestoneId + "\n" +
+                "\tMilestone name: " + milestoneName + "\n" +
                 "\tProject: " + project + "\n" +
                 "\tDescription: " + description + "\n" +
                 "\tDue Date: " + dueDate + "\n" +

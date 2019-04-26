@@ -1,15 +1,11 @@
 #files from intellij
 *.log
 *.class
-<<<<<<< HEAD
 *.lst
-=======
->>>>>>> 8d75fbb38d5d46f85b6a493d00034cd663848a75
+*.xml
 .idea/workspace.xml
 /target
 /.idea
 milestonedb.mv.db
 milestonedb.trace.db
 MilestonePlannerApp.iml
-<<<<<<< HEAD
-=======
