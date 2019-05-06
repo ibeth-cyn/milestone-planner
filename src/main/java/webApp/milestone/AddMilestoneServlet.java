@@ -15,11 +15,11 @@ public class AddMilestoneServlet extends HttpServlet {
 
     private MilestoneDB milestones = new MilestoneDB();
 
-    @Override
-    //getting user input (milestone) from form
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/views/addMilestone.jsp").forward(request,response);
-    }
+//    @Override
+//    //getting user input (milestone) from form
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        request.getRequestDispatcher("/WEB-INF/views/addMilestone.jsp").forward(request,response);
+//    }
 
     @Override
     //posting new user information on web page
