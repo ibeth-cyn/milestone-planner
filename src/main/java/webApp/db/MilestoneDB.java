@@ -14,7 +14,6 @@ public class MilestoneDB implements AutoCloseable {
     static final String JDBC_Driver = "org.h2.Driver";
     static final String DB_URL = "jdbc:h2:~/milestonedb";
 
-
     //database credentials
     static final String USER = "";
     static final String PASS = "";
@@ -44,7 +43,7 @@ public class MilestoneDB implements AutoCloseable {
                     "(id INT NOT NULL," +
                     "name VARCHAR(30)," +
                     "project VARCHAR(30)," +
-                    "description VARCHAR(255)," +
+                    "description VARCHAR(1000)," +
                     "duedate VARCHAR(30)," +
                     "completeStatus VARCHAR(30)," +
                     "completionDate VARCHAR(30)," +
