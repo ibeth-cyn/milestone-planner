@@ -25,7 +25,7 @@ public class Milestone{
 
 
     //Constructor that takes an isComplete argument
-    public Milestone(String milestoneName, String project, String description, String dueDate, String isComplet){
+    public Milestone(String milestoneName, String project, String description, String dueDate, String isComplete){
 
         this.milestoneId = getRandomId();
         System.out.println("the random id is: "+ this.milestoneId);

@@ -32,9 +32,6 @@
         <div class = "form_input" id="form_button">
             <button><input type="submit" value="Register"/></button>
         </div>
-        <div class = "form_input">
-            <p>Already have an account? <a href="/webApp.login.do">Login here</a></p>
-        </div>
 <!--Include an already registed message hyperlinked -->
     </form>
 </div>

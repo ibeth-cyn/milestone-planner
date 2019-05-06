@@ -27,7 +27,6 @@ public class AddMilestoneServlet extends HttpServlet {
         String complete = completeArray[0];
 
         milestones.addMilestone(new Milestone(name, project, description, dueDate, complete));
-
         response.sendRedirect("/webApp.listMilestone.do");
     }
 }

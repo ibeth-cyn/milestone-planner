@@ -35,14 +35,22 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
+        boolean login = false;
         try {
-            passwordHash.validatePassword(password, authenticate.confirmUser(new LoginService(name)));
+            login = passwordHash.validatePassword(password, authenticate.confirmUser(new LoginService(name)));
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         } catch (InvalidKeySpecException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/webApp.listMilestone.do");
 
+        if(login==true) {
+            request.getSession().setAttribute("name",name);
+            response.sendRedirect("/webApp.listMilestone.do");
+        }else{
+            request.setAttribute("invalidLoginError", "The password you entered is incorrect. Please enter a valid password.");
+            request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+
+        }
     }
 }
