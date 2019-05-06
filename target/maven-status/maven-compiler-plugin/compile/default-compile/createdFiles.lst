@@ -1,3 +1,6 @@
+webApp\milestone\ListMilestoneServlet.class
+webApp\milestone\UpdateMilestoneServlet.class
+webApp\milestone\Milestone.class
 webApp\login\LogoutServlet.class
 webApp\db\PasswordDB.class
 webApp\milestone\DeleteMilestoneServlet.class

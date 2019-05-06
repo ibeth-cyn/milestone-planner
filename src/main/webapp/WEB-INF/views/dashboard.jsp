@@ -53,12 +53,6 @@
                     <div class="mcard">
 
                         <div class="row">
-                            <div class="col-1">
-                                <form action="">
-                                    <input class="mcomplete" type="checkbox" name="complete" value="False">
-                                    <span class="checkmark"></span><br>
-                                </form>
-                            </div>
 
                             <div class="col-6">
 
@@ -99,11 +93,7 @@
                         <%--</div>--%>
 
                         <div class="row">
-                            <div class="col-1">
-
-                            </div>
-
-                            <div class="col-11">
+                           <div class="col-12">
                                 <p>${milestone.description}</p>
                             </div>
 
@@ -112,12 +102,12 @@
                         <div class="row">
                             <div class="col card_icons">
 
-<%--                                <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">--%>
-<%--                                    <i class="fas fa-trash-alt card_icon"></i>--%>
-<%--                                </a>--%>
+                                <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
+                                    <i class="fas fa-trash-alt card_icon"></i>
+                                </a>
 
-                               <i class="fas fa-trash-alt card_icon"> <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
-                               </a></i>
+                               <%--<i class="fas fa-trash-alt card_icon"> <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">--%>
+                               <%--</a></i>--%>
 
 
                                 <button id="editMilestone_button-${loop.index}" class="editMilestone_button"><i class="fas fa-pencil-alt card_icon"></i></button>

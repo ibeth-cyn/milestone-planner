@@ -57,12 +57,18 @@ button{
 
 /*#editMilestone_button{*/
 .editMilestone_button{
-    background-color: blue;
+    background-color: inherit;
     color: #000;
+
     width: 10%;
     padding: 5px 10px;
 
     margin: 0;
+}
+
+.editMilestone_button :hover{
+    border: solid 1px #475BBF ;
+
 }
 
 .form_input{
