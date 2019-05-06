@@ -44,26 +44,70 @@
 
 
 <div class="dashboard">
-    <h1>Project: <span>E-Learning Website</span></h1>
+    <h1>Milestone <span>Planner</span></h1>
 
     <div class="container">
         <div class="row">
             <c:forEach items="${milestoneList}" var="milestone" varStatus="loop">
                 <div class="col-md-6">
                     <div class="mcard">
-                        <h3>${milestone.name}</h3>
 
                         <div class="row">
-                            <div class="col-6">
-                                <h4>Project: <span>${milestone.project}</span></h4>
+                            <div class="col-1">
+                                <form action="">
+                                    <input class="mcomplete" type="checkbox" name="complete" value="False">
+                                    <span class="checkmark"></span><br>
+                                </form>
                             </div>
 
-                            <div class="col-6 mdue_date">
+                            <div class="col-6">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <h3>${milestone.name}</h3>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <h4>Project: <span>${milestone.project}</span></h4>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-5 mdue_date">
                                 <p>Due: ${milestone.dueDate}</p>
                             </div>
                         </div>
 
-                        <p>${milestone.description}</p>
+
+
+
+                        <%--<div class="row">--%>
+                            <%--<div class="col-1">--%>
+
+                            <%--</div>--%>
+                            <%--<div class="col-11">--%>
+                                <%--<h4>Project: <span>${milestone.project}</span></h4>--%>
+                            <%--</div>--%>
+
+
+                        <%--</div>--%>
+
+                        <div class="row">
+                            <div class="col-1">
+
+                            </div>
+
+                            <div class="col-11">
+                                <p>${milestone.description}</p>
+                            </div>
+
+                        </div>
 
                         <div class="row">
                             <div class="col card_icons">
