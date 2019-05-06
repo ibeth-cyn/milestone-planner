@@ -22,8 +22,8 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   static {
     _jspx_dependants = new java.util.HashMap<java.lang.String,java.lang.Long>(2);
-    _jspx_dependants.put("/WEB-INF/views/style/login_style.css", Long.valueOf(1555843224770L));
-    _jspx_dependants.put("/WEB-INF/views/style/style.css", Long.valueOf(1555843224771L));
+    _jspx_dependants.put("/WEB-INF/views/style/login_style.css", Long.valueOf(1555841207851L));
+    _jspx_dependants.put("/WEB-INF/views/style/style.css", Long.valueOf(1555841207855L));
   }
 
   private javax.el.ExpressionFactory _el_expressionfactory;
@@ -157,8 +157,8 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<body>\r\n");
       out.write("\r\n");
       out.write("<div class=\"login_text\">\r\n");
-      out.write("<h1>Welcome to the Login Page!</h1>\r\n");
-      out.write("<p>Log in to view your Milestones.</p>\r\n");
+      out.write("<h1>Welcome To Your Milestone Planner App!</h1>\r\n");
+      out.write("<p>Log in to View Your Milestones.</p>\r\n");
       out.write("    <!--We can have the paragraphs below appear after a user logs in. How do we figure that out? Debbie?-->\r\n");
       out.write("    <!--p>Registration Successful!</p>\r\n");
       out.write("    <p>Log in to view your Milestones</p-->\r\n");
@@ -169,6 +169,9 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <form action=\"/webApp.login.do\" method=\"post\">\r\n");
       out.write("\r\n");
       out.write("        <div class=\"form_input\">\r\n");
+      out.write("            <p>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${invalidLoginError}", java.lang.String.class, (javax.servlet.jsp.PageContext)_jspx_page_context, null, false));
+      out.write("</p><br>\r\n");
       out.write("            Name:<br> <input type=\"text\" name=\"name\" maxlength=\"30\"/>\r\n");
       out.write("        </div>\r\n");
       out.write("\r\n");

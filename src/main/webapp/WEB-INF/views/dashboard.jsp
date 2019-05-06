@@ -53,12 +53,6 @@
                     <div class="mcard">
 
                         <div class="row">
-                            <div class="col-1">
-                                <form action="">
-                                    <input class="mcomplete" type="checkbox" name="complete" value="False">
-                                    <span class="checkmark"></span><br>
-                                </form>
-                            </div>
 
                             <div class="col-6">
 
@@ -99,11 +93,7 @@
                         <%--</div>--%>
 
                         <div class="row">
-                            <div class="col-1">
-
-                            </div>
-
-                            <div class="col-11">
+                           <div class="col-12">
                                 <p>${milestone.description}</p>
                             </div>
 
