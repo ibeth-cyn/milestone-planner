@@ -24,11 +24,6 @@
 </head>
 
 <body>
-<%-------------------------------------------------%>
-<%--TODO: Add a menu bar--%>
-<%--TODO: Add a footer--%>
-<%--TODO: Add hover effects where necessary--%>
-<%-------------------------------------------------%>
 
 <%--<div class="container">--%>
     <div class="row menu-bar">
@@ -77,20 +72,6 @@
                                 <p>Due: ${milestone.dueDate}</p>
                             </div>
                         </div>
-
-
-
-
-                        <%--<div class="row">--%>
-                            <%--<div class="col-1">--%>
-
-                            <%--</div>--%>
-                            <%--<div class="col-11">--%>
-                                <%--<h4>Project: <span>${milestone.project}</span></h4>--%>
-                            <%--</div>--%>
-
-
-                        <%--</div>--%>
 
                         <div class="row">
                            <div class="col-12">
