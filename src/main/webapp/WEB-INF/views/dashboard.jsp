@@ -112,16 +112,11 @@
                         <div class="row">
                             <div class="col card_icons">
 
-<%--                                <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">--%>
-<%--                                    <i class="fas fa-trash-alt card_icon"></i>--%>
-<%--                                </a>--%>
+                                <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
+                                    <i class="fas fa-trash-alt card_icon"></i>
+                                </a>
 
-                               <i class="fas fa-trash-alt card_icon"> <a class="icon_button" id="delete_icon" href="/webApp.deleteMilestone.do?name=${milestone.name}&project=${milestone.project}&description=${milestone.description}&dueDate=${milestone.dueDate}">
-                               </a></i>
-
-
-                                <button id="editMilestone_button-${loop.index}" class="editMilestone_button"><i class="fas fa-pencil-alt card_icon"></i></button>
-                                <%--removed class="editMilestone_button" --%>
+                                <button class="editMilestone_button"><i class="editMilestone_button fas fa-pencil-alt card_icon" id="editMilestone_button-${loop.index}"></i></button>
                                 <i class="fas fa-share-alt card_icon"></i>
                             </div>
                         </div>
@@ -181,7 +176,6 @@
     </div>
     <div class="col-1">
         <div class="add_milestone">
-            <%--<a href="/webApp.addMilestone.do"><i class="fas fa-plus-circle"></i></a>--%>
             <button id="addMilestone_button"><i class="fas fa-plus-circle"></i></button>
         </div>
     </div>

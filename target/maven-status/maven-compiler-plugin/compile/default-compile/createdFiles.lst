@@ -1,7 +1,14 @@
+webApp\milestone\ListMilestoneServlet.class
+webApp\milestone\UpdateMilestoneServlet.class
+webApp\milestone\Milestone.class
+webApp\login\LoginServlet.class
+webApp\login\LoginService.class
 webApp\login\LogoutServlet.class
 webApp\db\PasswordDB.class
+webApp\db\MilestoneDB.class
 webApp\milestone\DeleteMilestoneServlet.class
 webApp\register\RegisterServlet.class
+webApp\login\PasswordHash.class
 webApp\milestone\AddMilestoneServlet.class
 webApp\register\RegisterService.class
 webApp\login\Filter.class
