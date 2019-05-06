@@ -22,13 +22,8 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   static {
     _jspx_dependants = new java.util.HashMap<java.lang.String,java.lang.Long>(2);
-<<<<<<< HEAD
-    _jspx_dependants.put("/WEB-INF/views/style/login_style.css", Long.valueOf(1555841207851L));
-    _jspx_dependants.put("/WEB-INF/views/style/style.css", Long.valueOf(1555841207855L));
-=======
     _jspx_dependants.put("/WEB-INF/views/style/login_style.css", Long.valueOf(1557158306550L));
     _jspx_dependants.put("/WEB-INF/views/style/style.css", Long.valueOf(1556088967386L));
->>>>>>> updating input length of the description variable
   }
 
   private javax.el.ExpressionFactory _el_expressionfactory;
