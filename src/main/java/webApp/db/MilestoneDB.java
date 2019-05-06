@@ -13,6 +13,10 @@ public class MilestoneDB implements AutoCloseable {
 
     static final String JDBC_Driver = "org.h2.Driver";
     static final String DB_URL = "jdbc:h2:~/milestonedb";
+<<<<<<< HEAD
+=======
+
+>>>>>>> debbies_branch
 
     //database credentials
     static final String USER = "";
