@@ -4,3 +4,4 @@ webApp\milestone\DeleteMilestoneServlet.class
 webApp\register\RegisterServlet.class
 webApp\milestone\AddMilestoneServlet.class
 webApp\register\RegisterService.class
+webApp\login\Filter.class

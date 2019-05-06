@@ -22,8 +22,8 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   static {
     _jspx_dependants = new java.util.HashMap<java.lang.String,java.lang.Long>(2);
-    _jspx_dependants.put("/WEB-INF/views/style/login_style.css", Long.valueOf(1556088956486L));
-    _jspx_dependants.put("/WEB-INF/views/style/style.css", Long.valueOf(1556088967386L));
+    _jspx_dependants.put("/WEB-INF/views/style/login_style.css", Long.valueOf(1555843224770L));
+    _jspx_dependants.put("/WEB-INF/views/style/style.css", Long.valueOf(1555843224771L));
   }
 
   private javax.el.ExpressionFactory _el_expressionfactory;
@@ -165,7 +165,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</div>\r\n");
       out.write("\r\n");
       out.write("<!--Create webApp.login form for user-->\r\n");
-      out.write("\r\n");
       out.write("<div class=\"login_card\">\r\n");
       out.write("    <form action=\"/webApp.login.do\" method=\"post\">\r\n");
       out.write("\r\n");
@@ -179,6 +178,9 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("        <div class=\"form_input\" id=\"form_button\">\r\n");
       out.write("            <button><input type=\"submit\" value=\"Login\"/></button>\r\n");
+      out.write("        </div>\r\n");
+      out.write("        <div class = \"form_input\">\r\n");
+      out.write("            <p>Do not have an account? <a href=\"/webApp.register.do\"> SignUp here</a></p>\r\n");
       out.write("        </div>\r\n");
       out.write("\r\n");
       out.write("    </form>\r\n");
