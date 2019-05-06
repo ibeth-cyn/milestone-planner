@@ -26,7 +26,6 @@ public class AddMilestoneServlet extends HttpServlet {
         String complete = request.getParameter("complete");
 
         milestones.addMilestone(new Milestone(name, project, description, dueDate, complete));
-
         response.sendRedirect("/webApp.listMilestone.do");
     }
 }
