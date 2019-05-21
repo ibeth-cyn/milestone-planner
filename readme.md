@@ -21,10 +21,11 @@ Server: Tomcat 7 - server was integrated in IntelliJ
 
 
 ## Authors
-Name                        Email
-Debbie Adejumo              dadeju200@caledonian.ac.uk
-Fatuma Ingabire             fingab200@caledonian.ac.uk
-Elizabeth Akpan             eakpan200@caledonian.ac.uk
+Name | Email
+--- | --- 
+Debbie Adejumo |    dadeju200@caledonian.ac.uk
+Fatuma Ingabire | fingab200@caledonian.ac.uk
+Elizabeth Akpan |   eakpan200@caledonian.ac.uk
 
 ## License
 
