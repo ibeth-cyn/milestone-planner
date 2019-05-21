@@ -11,13 +11,13 @@ Server: Tomcat 7 - server was integrated in IntelliJ
 ## How to Run the Project on IntelliJ
 1. Download the source code to your local computer
 2. Import it into IntelliJ as a maven project
-3. On the 'run' Menu, select the 'Edit Configurations'
-4. Click on the '+' to add a new configuration
-5. From the configurations list, select 'maven'
-6. On the parameters list, add 'tomcat7:run' on the Command Line option
-7. Click 'apply'
-8. 'Run' the project by clicking on the run icon
-9. The application will launch on the localhost at port 8080. i.e. 'https://localhost:8080/'
+3. On the `run` Menu, select the `Edit Configurations`
+4. Click on the `+` to add a new configuration
+5. From the configurations list, select `maven`
+6. On the parameters list, add `tomcat7:run` on the Command Line option
+7. Click `apply`
+8. `Run` the project by clicking on the run icon
+9. The application will launch on the localhost at port 8080. i.e. `https://localhost:8080/`
 
 
 ## Authors
