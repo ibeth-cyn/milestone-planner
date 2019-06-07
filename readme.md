@@ -26,7 +26,7 @@ Name | Email
 --- | --- 
 Debbie Adejumo |    dadeju200@caledonian.ac.uk
 Fatuma Ingabire | fingab200@caledonian.ac.uk
-Elizabeth Akpan |   eakpan200@caledonian.ac.uk
+Elizabeth Akpan |   eakpan15@alustudent.com
 
 ## License
 
