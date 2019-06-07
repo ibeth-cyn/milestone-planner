@@ -7,6 +7,7 @@ Milestone planner web application is an online productivity tool that allows use
 + OS: `Windows 10`
 + Java Version: `11.0.2`
 + Server: `Tomcat 7` - server was integrated in IntelliJ
++ Stack: `Java`, `JSP`, `SQL`, `CSS`, `JavaScript`
 
 ## How to Run the Project on IntelliJ
 1. Download the source code to your local computer
